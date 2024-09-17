@@ -1,2 +1,2 @@
 # X-Sentry
-This is a project
+This prject used mainlythe computer vision OpenCV library
