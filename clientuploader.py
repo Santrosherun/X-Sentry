@@ -6,8 +6,8 @@ class Client:
     def __init__(self):
         pass
 
-    def upload(img):
-        url = 'http://localhost:3450/newupload'
+    def upload(self, img):
+        url = 'http://localhost:3455/newupload'
 
         headers = {'Content-Type': 'application/json'}
 
@@ -22,6 +22,10 @@ class Client:
             print("IMAGE UPLOAD SUCCESSFULL")
         else:
             print("ERROR")
+
+
+c = Client()
+c.upload('Skin Contours.png')
 
 
     

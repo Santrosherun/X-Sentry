@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 from clientuploader import Client
 
-#client.upload('nombre del archivo y extension'), despues de tomar la imagen, la subes por medio de este metodo.
+#client.upload('nombre del archivo y extension'), despues de tomar la imagen, la subes por medio de este
 client = Client()
 
 def tomarFoto():
