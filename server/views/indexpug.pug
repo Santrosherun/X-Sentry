@@ -1,0 +1,48 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(rel='stylesheet', type = 'text/css' ,href='indexstyles.css')
+  title Laser
+.column1
+  nav
+    ul.navbar
+      li
+        a(href='') Home
+      li
+        a(href='index.html') Laser
+      li
+        a(href='credits.html') Credits
+  .config
+    label(for='') Bodypart
+    .select-container(style='width:200px;')
+      select#bodypart-select(name='')
+        option(value='Mano') Mano
+        option(value='Brazo') Brazo
+        option(value='Espalda') Espalda
+        option(value='Pierna') Pierna
+  .config
+    label(for='') Tipo de lesion
+    .select-container(style='width:200px;')
+      select#lesion-select(name='')
+        option(value='quemadura') Quemadura
+        option(value='laceracion') Laceracion
+        option(value='hematoma') Hematoma
+        option(value='vaso') Vaso
+  .config
+    label(for='') Status
+    .status-container
+      div USUARIO
+      div Nombre Apellido
+      .auth-msg Autenticado por X-SEC entry
+.column2
+  .banner
+    img#logo(src='laser.png' alt='logo')
+    h1#title X-SENTRY
+  .scanner
+    p.scannerTitle Escaner
+    .scannerIMG
+  .controller
+    a#shoot(href='/shoot') Shoot
+    button#switch Switch
+    label.switch-text Longitud de onda actual : 1064nm

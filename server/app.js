@@ -9,12 +9,13 @@ const PORT = process.env.PORT || 3455;
 app.set('view engine', 'pug');
 app.set('views', './views');
 app.use(express.static('public'));
+app.use(express.static('css'));
 app.use(morgan("tiny"));
 app.use(express.json({limit : '30MB'}));
 app.use(express.urlencoded({ extended: true }));
 
 app.get('/', (req, res) => {
-    res.render('myview')
+    res.render('indexpug')
 })
 
 app.post('/newupload', (req, res) => {
@@ -30,6 +31,11 @@ app.post('/auth', (req, res) => {
     console.log(msg1+' '+msg2)
     res.send(200)
 
+})
+
+app.get('/shoot', (req, res) =>{
+    console.log('shoot')
+    res.render('indexpug')
 })
 
 app.listen(PORT, () =>{
