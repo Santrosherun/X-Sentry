@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="indexstyles.css">
+    <title>Laser</title>
+</head>
+<body>
+   <div class = "column1">
+        <nav>
+            <ul class="navbar">
+                <li><a href="">Home</a></li>
+                <li><a href="index.html">Laser</a></li>
+                <li><a href="credits.html">Credits</a></li>
+            </ul>
+        </nav>
+        <div class="config">
+            <label for="">Bodypart</label>
+            <div class="select-container" style="width:200px;">
+                <select name="" id="bodypart-select">
+                    <option value="Mano">Mano</option>
+                    <option value="Brazo">Brazo</option>
+                    <option value="Espalda">Espalda</option>
+                    <option value="Pierna">Pierna</option>
+                </select>
+            </div>
+            
+        </div>
+        <div class="config">
+            <label for="">Tipo de lesion</label>
+            <div class="select-container" style="width:200px;">
+                <select name="" id="lesion-select">
+                    <option value="quemadura">Quemadura</option>
+                    <option value="laceracion">Laceracion</option>
+                    <option value="hematoma">Hematoma</option>
+                    <option value="vaso">Vaso</option>
+                </select>
+            </div>
+        </div>
+        <div class="config">
+            <label for="">Status</label>
+            <div class="status-container">
+                <div>USUARIO</div>
+                <div>Nombre Apellido</div>
+                <div class="auth-msg">Autenticado por X-SEC entry</div>
+            </div>
+        </div>
+   </div>
+   <div class="column2">
+        <div class="banner"> 
+            <img src="laser.png" alt="logo" id="logo"> 
+            <h1 id="title">X-SENTRY</h1>
+        </div>
+        <div class="scanner">
+            <p class="scannerTitle">Escaner</p>
+            <div class="scannerIMG">
+
+            </div>
+        </div> 
+        <div class="controller">
+            <button id = "shoot">Shoot</button>
+            <button id = "switch">Switch</button>
+            <label class="switch-text">Longitud de onda actual : 1064nm</label>
+        </div>       
+   </div>
+
+</body>
+</html>
