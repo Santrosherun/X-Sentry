@@ -6,7 +6,7 @@ const bodyparser = require("body-parser");
 const morgan = require("morgan");
 const fs = require("fs");
 const { STATUS_CODES } = require('http');
-const PORT = process.env.PORT || 3455;
+const PORT = process.env.PORT || 3466;
 
 const port = new SerialPort({ path: 'COM4', baudRate: 9600 });
 app.set('view engine', 'pug');
@@ -45,7 +45,7 @@ app.get('/shoot', (req, res) =>{
 })
 
 app.listen(PORT, () =>{
-    console.log('LISTENING TO PORT 3455');
+    console.log('LISTENING TO PORT 3466');
     console.log('ENDPOINTS: \n/\n/uploadimage');
 });
 
