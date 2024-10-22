@@ -34,8 +34,9 @@ app.post('/auth', (req, res) => {
 })
 
 app.get('/shoot', (req, res) =>{
-    console.log('shoot')
-    res.render('indexpug')
+    //Lamamos el serialConnection.
+    console.log('shooting...')
+    res.redirect('/')
 })
 
 app.listen(PORT, () =>{

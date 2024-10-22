@@ -1,6 +1,7 @@
 const { SerialPort } = require('serialport')
 const prompt = require("prompt-sync")({ sigint: true });
 
+
 //PONER PUERTO SERIAL CORRECTO, EL QUE SE ESTE USANDO CON EL ARDUINO.
 const port = new SerialPort({ path: '/dev/tty-usbserial1', baudRate: 9600 })
 let inProcess = true
