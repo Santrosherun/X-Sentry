@@ -26,6 +26,10 @@ body{
     flex-direction: column;
 }
 
+.controller{
+    margin-top: 30px;
+}
+
 .scannerIMG{
     background-color: white;
     border-color: #000;
@@ -77,7 +81,7 @@ nav ul li a:hover{
     margin-left: 45px;
 }
 
-.controller button{
+.controller a{
     padding: 25px 50px;
     margin-right: 50px;
     margin-left: 60px;
@@ -127,6 +131,7 @@ nav ul li a:hover{
 
 #shoot {
   margin-left: 70px;
+  margin-top: 20px;
   background-color: #199319;
   color: white;
   padding: 15px 25px;
@@ -140,4 +145,14 @@ nav ul li a:hover{
 #shoot:active{
     background-color: white;
     color:#111;
+}
+
+#logoxsec{
+    margin-left: 40px;
+}
+
+.scannerIMGin{
+    width: 900px;
+    height: 400px;
+
 }

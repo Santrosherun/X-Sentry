@@ -24,7 +24,7 @@ app.get('/', (req, res) => {
 app.post('/newupload', (req, res) => {
     let image64 = req.body ["uploadedimage"];
     let buffer = Buffer.from(image64, "base64");
-    fs.writeFileSync("imagendescargada.png", buffer);
+    fs.writeFileSync("public/imagendescargada.png", buffer);
 
 })
 
@@ -41,7 +41,8 @@ app.get('/shoot', (req, res) =>{
     startMovement()
     console.log(readData())
     console.log('shooting...')
-    res.redirect('/')
+    res.render('indexpugimg')
+
 })
 
 app.listen(PORT, () =>{
