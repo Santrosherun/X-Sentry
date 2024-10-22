@@ -1,33 +1,30 @@
-const { SerialPort } = require('serialport')
+const { SerialPort } = require('serialport');
 const prompt = require("prompt-sync")({ sigint: true });
 
+// PONER PUERTO SERIAL CORRECTO
+const port = new SerialPort({ path: 'COM4', baudRate: 9600 });
 
-//PONER PUERTO SERIAL CORRECTO, EL QUE SE ESTE USANDO CON EL ARDUINO.
-const port = new SerialPort({ path: '/dev/tty-usbserial1', baudRate: 9600 })
-let inProcess = true
+let inProcess = true;
 
 let startMovement = () => {
     port.write('empezarrecorrido', function(err) {
         if (err) {
-          return console.log('Error on write: ', err.message)
+            return console.log('Error on write: ', err.message);
         }
-        console.log('message written')
-      })
-}
+        console.log('Mensaje enviado: empezarrecorrido');
+    });
+};
 
-
-
-// Open errors will be emitted as an error event
+// Manejo de errores del puerto
 port.on('error', function(err) {
-  console.log('Error: ', err.message)
-})
+    console.log('Error de puerto serial: ', err.message);
+});
 
-while(inProcess){
-    let input = prompt()
-    if(input == 'shoot'){
-        console.log('movement started')
-        startMovement()
-    }else{
-        console.log('enter a correct command')
-    }
+// Leer los datos que vienen del puerto serial (opcional, si el Arduino envía datos)
+let readData = () =>{
+  port.on('data', function(data) {
+      return data.toString();
+  });
 }
+
+
